@@ -162,7 +162,7 @@ namespace C3AIOOP
         private void btn_addcam_Click(object sender, EventArgs e)
         {
             previewbox_generate.Text = previewbox_generate.Text + "\n\nCamera Status:"
-               + "\nMonitor 1: " + txt_mon1.Text + "\nMonitor 2: " + txt_mon2.Text + "\nMonitor 3: " + txt_mon3.Text + "\nMonitor 4: " + txt_mon4.Text + "\nMonitor 5: " + txt_mon5.Text + "\nMonitor 6: " + txt_mon6.Text;
+               + "\n Monitor 1: " + txt_mon1.Text + " Cameras" + "\n Monitor 2: " + txt_mon2.Text + " Cameras" + "\n Monitor 3: " + txt_mon3.Text + " Cameras" + "\n Monitor 4: " + txt_mon4.Text + " Cameras" + "\n Monitor 5: " + txt_mon5.Text + " Cameras" + "\n Monitor 6: " + txt_mon6.Text + " Cameras";
             btn_addcam.Enabled = false;
         }
 

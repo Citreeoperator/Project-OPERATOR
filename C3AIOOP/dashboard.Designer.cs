@@ -34,6 +34,7 @@
             this.mainmenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dailyrepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quarterrepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -47,7 +48,6 @@
             this.quezonOperationAndWarningSitRepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.endorsementReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atimonanDRRMOGCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shiftEndorsementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_title = new System.Windows.Forms.Label();
             this.lbl_dateandtime = new System.Windows.Forms.Label();
@@ -82,6 +82,7 @@
             this.mainmenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.dailyrepToolStripMenuItem,
+            this.quarterrepToolStripMenuItem,
             this.toolStripSeparator1,
             this.aboutToolStripMenuItem,
             this.toolStripSeparator2,
@@ -95,50 +96,59 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.homeToolStripMenuItem.Text = "Dashboard Report";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // dailyrepToolStripMenuItem
             // 
             this.dailyrepToolStripMenuItem.Name = "dailyrepToolStripMenuItem";
-            this.dailyrepToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.dailyrepToolStripMenuItem.Text = "Daily Report Dashboard";
+            this.dailyrepToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.dailyrepToolStripMenuItem.Text = "Monthly Report Dashboard";
+            this.dailyrepToolStripMenuItem.Visible = false;
             this.dailyrepToolStripMenuItem.Click += new System.EventHandler(this.dailyrepToolStripMenuItem_Click);
+            // 
+            // quarterrepToolStripMenuItem
+            // 
+            this.quarterrepToolStripMenuItem.Enabled = false;
+            this.quarterrepToolStripMenuItem.Name = "quarterrepToolStripMenuItem";
+            this.quarterrepToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.quarterrepToolStripMenuItem.Text = "Quarterly Report Dashboard";
+            this.quarterrepToolStripMenuItem.Click += new System.EventHandler(this.quarterrepToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(194, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(216, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(194, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(216, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(194, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(216, 6);
             // 
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.ExitToolStripMenuItem.Text = "Exit";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -183,8 +193,7 @@
             // endorsementReportsToolStripMenuItem
             // 
             this.endorsementReportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.atimonanDRRMOGCToolStripMenuItem,
-            this.shiftEndorsementToolStripMenuItem});
+            this.atimonanDRRMOGCToolStripMenuItem});
             this.endorsementReportsToolStripMenuItem.Name = "endorsementReportsToolStripMenuItem";
             this.endorsementReportsToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
             this.endorsementReportsToolStripMenuItem.Text = "Endorsement Reports";
@@ -195,13 +204,6 @@
             this.atimonanDRRMOGCToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.atimonanDRRMOGCToolStripMenuItem.Text = "Atimonan DRRMO GC";
             this.atimonanDRRMOGCToolStripMenuItem.Click += new System.EventHandler(this.atimonanDRRMOGCToolStripMenuItem_Click);
-            // 
-            // shiftEndorsementToolStripMenuItem
-            // 
-            this.shiftEndorsementToolStripMenuItem.Enabled = false;
-            this.shiftEndorsementToolStripMenuItem.Name = "shiftEndorsementToolStripMenuItem";
-            this.shiftEndorsementToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.shiftEndorsementToolStripMenuItem.Text = "Shift Endorsement";
             // 
             // pnl_top
             // 
@@ -330,7 +332,6 @@
         private System.Windows.Forms.ToolStripMenuItem situationalReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quezonOperationAndWarningSitRepToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem endorsementReportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shiftEndorsementToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
@@ -346,5 +347,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atimonanDRRMOGCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quarterrepToolStripMenuItem;
     }
 }

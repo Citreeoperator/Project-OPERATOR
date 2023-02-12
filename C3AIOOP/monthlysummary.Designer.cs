@@ -328,9 +328,9 @@
             // 
             this.lbl_month.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_month.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_month.Location = new System.Drawing.Point(679, 0);
+            this.lbl_month.Location = new System.Drawing.Point(609, 0);
             this.lbl_month.Name = "lbl_month";
-            this.lbl_month.Size = new System.Drawing.Size(562, 100);
+            this.lbl_month.Size = new System.Drawing.Size(703, 100);
             this.lbl_month.TabIndex = 0;
             this.lbl_month.Text = "MMMM\'s Summary Report";
             this.lbl_month.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

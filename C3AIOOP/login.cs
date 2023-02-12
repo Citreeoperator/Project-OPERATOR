@@ -36,17 +36,23 @@ namespace C3AIOOP
                 if (count == 1)
                 {
                     this.Hide();
-                    dashboard dashboard = new dashboard();
-                    dashboard.Show();
+                    loadingscreen loadingscreen = new loadingscreen();
+                    loadingscreen.Show();
 
                 }
                 else if (count > 1)
                 {
                     MessageBox.Show("Duplicate Username and Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_user.Clear();
+                    txt_pass.Clear();
+                    txt_user.Focus();
                 }
                 else
                 {
                     MessageBox.Show("Username or Password is not correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_user.Clear();
+                    txt_pass.Clear();
+                    txt_user.Focus();
                 }
                 myConn.Close();
             }

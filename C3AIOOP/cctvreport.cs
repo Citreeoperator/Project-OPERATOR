@@ -22,7 +22,7 @@ namespace C3AIOOP
         private void DisplayValue()
         {
             MySqlConnection myConn = new MySqlConnection(connectionsclass.myConnection);
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM db_c3blackops.c3_request_form", myConn);
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM db_c3blackops.c3_request_form GROUP BY caseno DESC", myConn);
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -36,24 +36,33 @@ namespace C3AIOOP
             DisplayValue();
             txt_search.Text = "";
             drop_searchfilter.Text = "";
+
         }
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            try
+            //if drop down and text box are empty show error message
+            if (drop_searchfilter.Text == "" && txt_search.Text == "")
             {
-                MySqlConnection myConn = new MySqlConnection(connectionsclass.myConnection);
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM db_c3blackops.c3_request_form WHERE " + drop_searchfilter.Text + " LIKE '%" + txt_search.Text + "%'", myConn);
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dataGridReports.DataSource = dt;
-                dataGridReports.Update();
-                dataGridReports.Refresh();
+                MessageBox.Show("Please select a filter and enter a keyword", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            else 
             {
-                MessageBox.Show(ex.Message + "\nPlease try again." + " If the problem persists, please contact your system administrator.");
+                try
+                {
+                    MySqlConnection myConn = new MySqlConnection(connectionsclass.myConnection);
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM db_c3blackops.c3_request_form WHERE " + drop_searchfilter.Text + " LIKE '%" + txt_search.Text + "%'", myConn);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridReports.DataSource = dt;
+                    dataGridReports.Update();
+                    dataGridReports.Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\nPlease try again." + " If the problem persists, please contact your system administrator.");
+                }
             }
         }
     }

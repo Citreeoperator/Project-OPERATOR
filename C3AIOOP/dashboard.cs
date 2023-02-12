@@ -20,9 +20,14 @@ namespace C3AIOOP
         monthlysummary monthlysummary = new monthlysummary();
         sitrep sitrep = new sitrep();
         atimdrrmendorsement atimdrrmendorsement = new atimdrrmendorsement();
+        quarterlyrep quarterlyrep = new quarterlyrep();
         public dashboard()
         {
             InitializeComponent();
+            monthlysummary.TopLevel = false;
+            pnl_main.Controls.Add(monthlysummary);
+            monthlysummary.BringToFront();
+            monthlysummary.Show();
         }
 
         private void tmr_time_Tick(object sender, EventArgs e)
@@ -32,12 +37,10 @@ namespace C3AIOOP
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            monthlysummary.Hide();
-            sitrep.Hide();
-            cctvform.Hide();
-            cctvreport.Hide();
-            about.Hide();
-            atimdrrmendorsement.Hide();
+            monthlysummary.TopLevel = false;
+            pnl_main.Controls.Add(monthlysummary);
+            monthlysummary.BringToFront();
+            monthlysummary.Show();
         }
 
         private void dailyrepToolStripMenuItem_Click(object sender, EventArgs e)
@@ -139,6 +142,14 @@ namespace C3AIOOP
             pnl_main.Controls.Add(atimdrrmendorsement);
             atimdrrmendorsement.BringToFront();
             atimdrrmendorsement.Show();
+        }
+
+        private void quarterrepToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            quarterlyrep.TopLevel = false;
+            pnl_main.Controls.Add(quarterlyrep);
+            quarterlyrep.BringToFront();
+            quarterlyrep.Show();
         }
     }
 }
