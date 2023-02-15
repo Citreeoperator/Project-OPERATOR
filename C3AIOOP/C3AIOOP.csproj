@@ -39,6 +39,8 @@
     <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +77,12 @@
       <DependentUpon>cctvreport.cs</DependentUpon>
     </Compile>
     <Compile Include="connectionsclass.cs" />
+    <Compile Include="copypaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="copypaster.Designer.cs">
+      <DependentUpon>copypaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cctvreport.resx">
       <DependentUpon>cctvreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="copypaster.resx">
+      <DependentUpon>copypaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>

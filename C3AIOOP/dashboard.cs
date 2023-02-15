@@ -21,6 +21,7 @@ namespace C3AIOOP
         sitrep sitrep = new sitrep();
         atimdrrmendorsement atimdrrmendorsement = new atimdrrmendorsement();
         quarterlyrep quarterlyrep = new quarterlyrep();
+        copypaster copypaster = new copypaster();
         public dashboard()
         {
             InitializeComponent();
@@ -150,6 +151,11 @@ namespace C3AIOOP
             pnl_main.Controls.Add(quarterlyrep);
             quarterlyrep.BringToFront();
             quarterlyrep.Show();
+        }
+
+        private void eZCopyPasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            copypaster.Show();
         }
     }
 }

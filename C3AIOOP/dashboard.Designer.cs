@@ -56,6 +56,8 @@
             this.btn_dark = new System.Windows.Forms.Button();
             this.tmr_time = new System.Windows.Forms.Timer(this.components);
             this.pnl_main = new System.Windows.Forms.Panel();
+            this.otherToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eZCopyPasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_1.SuspendLayout();
             this.pnl_top.SuspendLayout();
             this.pnl_bot.SuspendLayout();
@@ -69,7 +71,8 @@
             this.mainmenuToolStripMenuItem,
             this.cctvToolStripMenuItem,
             this.situationalReportToolStripMenuItem,
-            this.endorsementReportsToolStripMenuItem});
+            this.endorsementReportsToolStripMenuItem,
+            this.otherToolsToolStripMenuItem});
             this.menu_1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menu_1.Location = new System.Drawing.Point(0, 53);
             this.menu_1.Name = "menu_1";
@@ -291,6 +294,21 @@
             this.pnl_main.Size = new System.Drawing.Size(1920, 935);
             this.pnl_main.TabIndex = 3;
             // 
+            // otherToolsToolStripMenuItem
+            // 
+            this.otherToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eZCopyPasterToolStripMenuItem});
+            this.otherToolsToolStripMenuItem.Name = "otherToolsToolStripMenuItem";
+            this.otherToolsToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.otherToolsToolStripMenuItem.Text = "Other Tools";
+            // 
+            // eZCopyPasterToolStripMenuItem
+            // 
+            this.eZCopyPasterToolStripMenuItem.Name = "eZCopyPasterToolStripMenuItem";
+            this.eZCopyPasterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eZCopyPasterToolStripMenuItem.Text = "EZ Copy Paster";
+            this.eZCopyPasterToolStripMenuItem.Click += new System.EventHandler(this.eZCopyPasterToolStripMenuItem_Click);
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,5 +366,7 @@
         private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atimonanDRRMOGCToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quarterrepToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem otherToolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eZCopyPasterToolStripMenuItem;
     }
 }
